@@ -1,6 +1,6 @@
 dev:
   scheme: sftp
-  host: '188.166.31.48'
+  host: '178.62.219.92'
   port: 22
   user: 'root'
   pass: '@Fuan9204'
