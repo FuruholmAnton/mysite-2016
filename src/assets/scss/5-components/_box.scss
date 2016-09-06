@@ -308,6 +308,7 @@ $box-image-width: 180px;
 .box_copy {
 	padding-top: 0.5em;
 	font-size: 1.1em;
+  font-weight: 300;
 
 	@include media-query($sm) {
 		transform: scale(1);

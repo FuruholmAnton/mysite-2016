@@ -92,7 +92,7 @@
     animation-delay: $delay;
     animation-fill-mode: both;
     transition-timing-function: ease-out;
-    @include hacks();
+    // @include hacks();
 }
 
 .u-zoom-in {

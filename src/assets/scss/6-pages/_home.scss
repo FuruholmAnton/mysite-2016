@@ -97,13 +97,14 @@
 	display: block;
 	will-change: opacity, transform;
 	transform: translateZ(0);
+  @include fade-in-down(2s, 0.8s);
 
-	.has-js & {
-		opacity: 0;
-	}
+  // .has-js & {
+	// 	opacity: 0;
+	// }
 
 	.no-js & {
-		@include fade-in-down(2s, 0.8s);
+
 	}
 
 	@media screen and (min-width: $sm) {

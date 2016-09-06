@@ -13,6 +13,6 @@ tools:
 
 ---
 
-Allmoge is a small certified ecologic farm. I visited the farm a couple of times and I really liked the place. So I started working on a design just for fun.
+Allmoge is a small certified ecologic farm. I've visited the farm a couple of times and I really liked the place, so I started working on a design just for fun. Closed project.  
 
 <!--more-->
