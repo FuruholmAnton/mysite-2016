@@ -30,7 +30,14 @@
 		this.parentElement.querySelector(".box_image").addEventListener("click", closeBox);
 	}
 
-	function closeBox() {
+	function closeBox(e) {
+    console.dir(e.target);
+    if(e.target.classList.contains("boxImage_closeButton") || typeof e.target.parentElement === "object") {
+      e.preventDefault();
+    }
+    else {
+      debugger;
+    }
 		document.body.classList.remove("body-boxItem-open");
 		var openBoxes = document.querySelectorAll(".box_item--open");
 		for (var i = 0; i < openBoxes.length; i++) {
