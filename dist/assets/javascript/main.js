@@ -181,6 +181,8 @@ window.addEventListener("DOMContentLoaded", function () {
 }());
 "use strict";
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
 (function box() {
 
 	var boxes = document.querySelectorAll(".boxPreview");
@@ -211,7 +213,13 @@ window.addEventListener("DOMContentLoaded", function () {
 		this.parentElement.querySelector(".box_image").addEventListener("click", closeBox);
 	}
 
-	function closeBox() {
+	function closeBox(e) {
+		console.dir(e.target);
+		if (e.target.classList.contains("boxImage_closeButton") || _typeof(e.target.parentElement) === "object") {
+			e.preventDefault();
+		} else {
+			debugger;
+		}
 		document.body.classList.remove("body-boxItem-open");
 		var openBoxes = document.querySelectorAll(".box_item--open");
 		for (var i = 0; i < openBoxes.length; i++) {
