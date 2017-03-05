@@ -1,6 +1,6 @@
 if(document.querySelector(".subNav") instanceof HTMLElement) {
 
-(function subNav() {
+(function subNav(TweenMax) {
 
 	window.addEventListener("resize", function () {
 		 calcStartPosition();
@@ -88,7 +88,7 @@ if(document.querySelector(".subNav") instanceof HTMLElement) {
 	}
 
 
-})();
+})(TweenMax);
 
 }
 

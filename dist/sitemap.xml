@@ -50,4 +50,12 @@
 <url>
 <loc>http://localhost:1337/web-projects/walnut/</loc>
 </url>
+<url>
+<loc>http://localhost:1337/assets/vendors/greensock-js/docs.html</loc>
+<lastmod>2015-12-22T18:58:36+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:1337/assets/vendors/greensock-js/getting_started.html</loc>
+<lastmod>2015-12-22T18:58:36+01:00</lastmod>
+</url>
 </urlset>
