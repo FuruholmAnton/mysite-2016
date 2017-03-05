@@ -111,7 +111,7 @@ $nav-small: 60px;
 	}
 
 	@include media-query($sm) {
-		@extend .underline-from-center;
+		// @extend .underline-from-center;
 		display: inline-block;
 		color: #777;
 
