@@ -65,7 +65,7 @@
 
 @for $i from 1 through 12 {
     .col-#{$i} {
-        @extend %gutter;
+        // @extend %gutter;
         &:last-of-type {
             margin-bottom: 0px;
         }
@@ -88,7 +88,7 @@
 
         @for $i from 1 through 12 {
             .#{$name}-col-#{$i} {
-                @extend %gutter;
+                // @extend %gutter;
                 &:last-of-type {
                     margin-bottom: 0px;
                 }

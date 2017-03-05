@@ -1,24 +1,24 @@
-- path: bitbucket.svg
+# - path: bitbucket.svg
  
 - path: bower.svg
  
 - path: github.svg
 
-- path: html.svg
+# - path: html.svg
  
-- path: css3.svg
+# - path: css3.svg
   
-- path: grunt.svg
+# - path: grunt.svg
  
 - path: gulp.svg
  
-- path: javascript.svg
+# - path: javascript.svg
 
 - path: jekyll.svg
  
-- path: jquery.svg
+# - path: jquery.svg
  
-- path: less.svg
+# - path: less.svg
  
 - path: git.svg
  
@@ -26,11 +26,12 @@
  
 - path: mamp.svg
  
-- path: modenizr.svg
+# - path: modenizr.svg
  
 - path: mysql.svg
  
 - path: npm.svg
+
 - path: php.svg
  
 - path: polymer.svg
@@ -41,6 +42,6 @@
  
 - path: sublimetext.svg
  
-- path: terminal.svg
+# - path: terminal.svg
  
 - path: wordpress.svg

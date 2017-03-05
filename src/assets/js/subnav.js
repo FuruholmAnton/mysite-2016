@@ -83,7 +83,7 @@ if(document.querySelector(".subNav") instanceof HTMLElement) {
 			    offset   = elemRect.top - bodyRect.top;
 
 			e.preventDefault();
-			TweenLite.to(window, 2, {scrollTo:{y:offset}, ease:Power4.ease});
+			TweenMax.to(window, 2, {scrollTo:{y:offset}, ease:Power4.ease});
 		});
 	}
 

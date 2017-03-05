@@ -181,6 +181,7 @@ gulp.task('scripts', () =>
 var transform = function (filepath, file, i, length) {
     return '<script src="' + filepath + '" async></script>';
 }
+
 // 'gulp inject:head' -- injects our style.css file into the head of our HTML
 gulp.task('inject:head', () =>
   gulp.src('src/_includes/head.html')
