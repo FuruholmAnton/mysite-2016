@@ -344,3 +344,11 @@ gulp.task('rebuild', gulp.series('clean:dist', 'clean:assets',
 gulp.task('check', gulp.series('jekyll:doctor', 'lint'));
 
 
+gulp.task('upload', (done) => {
+  ghPages.publish(path.join(__dirname + '/../../', 'dist'), {
+    dotfiles: true,
+    // branch: "master"
+    },
+    done);
+});
+
