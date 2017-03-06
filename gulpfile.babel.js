@@ -327,7 +327,7 @@ gulp.task('default', gulp.series(
 // 'gulp build --prod' -- same as above but with production settings
 gulp.task('build', gulp.series(
   gulp.series('clean:assets', 'clean:gzip'),
-  gulp.series('assets', 'inject:head', 'inject:footer'),
+  gulp.series('assets', /*'inject:head',*/ 'inject:footer'),
   gulp.series('jekyll', 'assets:copy', 'html'),
   gulp.series('generate-service-worker')
 ));

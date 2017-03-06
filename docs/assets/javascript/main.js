@@ -384,7 +384,7 @@ if ('serviceWorker' in navigator) {
 
 if (document.querySelector(".subNav") instanceof HTMLElement) {
 
-	(function subNav(TweenMax) {
+	(function subNav() {
 
 		window.addEventListener("resize", function () {
 			calcStartPosition();
@@ -466,7 +466,7 @@ if (document.querySelector(".subNav") instanceof HTMLElement) {
 				TweenMax.to(window, 2, { scrollTo: { y: offset }, ease: Power4.ease });
 			});
 		}
-	})(TweenMax);
+	})();
 }
 "use strict";
 //# sourceMappingURL=main.js.map
