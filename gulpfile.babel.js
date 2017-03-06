@@ -28,7 +28,7 @@ function writeServiceWorkerFile(handleFetch, callback) {
 
   var packageJson = require('package-json');
   var path = require('path');
-  var rootDir = "dist";
+  var rootDir = "docs";
 
   var config = {
     cacheId: packageJson.name,
@@ -71,16 +71,16 @@ function writeServiceWorkerFile(handleFetch, callback) {
 // 'gulp clean:gzip' -- erases all the gzipped files
 // 'gulp clean:metadata' -- deletes the metadata file for Jekyll
 gulp.task('clean:assets', () => {
-  return del(['.tmp/**/*', '!.tmp/assets', '!.tmp/assets/images', '!.tmp/assets/images/**/*', 'dist/assets']);
+  return del(['.tmp/**/*', '!.tmp/assets', '!.tmp/assets/images', '!.tmp/assets/images/**/*', 'dist/assets', 'docs/assets']);
 });
 gulp.task('clean:images', () => {
-  return del(['.tmp/assets/images', 'dist/assets/images']);
+  return del(['.tmp/assets/images', 'dist/assets/images', 'docs/assets/images']);
 });
 gulp.task('clean:dist', () => {
-  return del(['dist/']);
+  return del(['dist/', 'docs/']);
 });
 gulp.task('clean:gzip', () => {
-  return del(['dist/**/*.gz']);
+  return del(['dist/**/*.gz', 'docs/**/*.gz']);
 });
 gulp.task('clean:metadata', () => {
   return del(['src/.jekyll-metadata']);
@@ -237,7 +237,7 @@ gulp.task('vendors', () =>
 // 'gulp html' -- does nothing
 // 'gulp html --prod' -- minifies and gzips our HTML files
 gulp.task('html', () =>
-  gulp.src('dist/**/*.html')
+  gulp.src('docs/**/*.html')
     .pipe($.if(argv.prod, $.htmlmin({
       removeComments: true,
       collapseWhitespace: true,
@@ -246,18 +246,18 @@ gulp.task('html', () =>
       removeRedundantAttributes: true
     })))
     .pipe($.if(argv.prod, $.size({title: 'optimized HTML'})))
-    .pipe($.if(argv.prod, gulp.dest('dist')))
+    .pipe($.if(argv.prod, gulp.dest('docs')))
     .pipe($.if(argv.prod, $.gzip({append: true})))
     .pipe($.if(argv.prod, $.size({
       title: 'gzipped HTML',
       gzip: true
     })))
-    .pipe($.if(argv.prod, gulp.dest('dist')))
+    .pipe($.if(argv.prod, gulp.dest('docs')))
 );
 
 // 'gulp deploy' -- pushes your dist folder to Github
 gulp.task('deploy', () => {
-  return gulp.src('dist/**/*')
+  return gulp.src('docs/**/*')
     .pipe($.ghPages());
 });
 
@@ -283,7 +283,7 @@ gulp.task('serve', () => {
       browser:   'Google Chrome'
     },
     server: {
-      baseDir: ['.tmp', 'dist']
+      baseDir: ['.tmp', 'docs']
     },
     port: 1337
   });
@@ -309,7 +309,7 @@ gulp.task('assets', gulp.series(
 // done this way because Jekyll overwrites the whole folder otherwise
 gulp.task('assets:copy', () =>
   gulp.src('.tmp/assets/**/*')
-    .pipe(gulp.dest('dist/assets'))
+    .pipe(gulp.dest('docs/assets'))
 );
 
 // 'gulp' -- cleans your assets and gzipped files, creates your assets and

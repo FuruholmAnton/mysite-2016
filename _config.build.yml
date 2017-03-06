@@ -10,6 +10,6 @@ lsi: true
 limit_posts: 0
 
 source: src
-destination: dist
+destination: docs
 
 url: https://furuholm.com
