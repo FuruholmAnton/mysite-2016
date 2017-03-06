@@ -260,6 +260,13 @@ gulp.task('deploy', () => {
   return gulp.src('docs/**/*')
     .pipe($.ghPages());
 });
+// 'gulp deploy' -- pushes your dist folder to Github
+gulp.task('deploy-main', () => {
+  return gulp.src('docs/**/*')
+    .pipe($.ghPages({
+      origin: 'furuholmanton.github.io'
+    }));
+});
 
 // 'gulp lint' -- check your JS for formatting errors using XO Space
 gulp.task('lint', () =>
