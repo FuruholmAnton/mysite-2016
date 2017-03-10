@@ -1,4 +1,4 @@
-function isInViewport(element) {
+export function isInViewport(element) {
   var rect = element.getBoundingClientRect();
   var html = document.documentElement;
   return (
@@ -8,7 +8,7 @@ function isInViewport(element) {
     rect.right <= (window.innerWidth || html.clientWidth)
   );
 }
-function enteredViewport(element) {
+export function enteredViewport(element) {
   var rect = element.getBoundingClientRect();
   var html = document.documentElement;
   return (
@@ -17,7 +17,7 @@ function enteredViewport(element) {
   );
 }
 
-function once(fn, context) {
+export function once(fn, context) {
 	var result;
 
 	return function() {

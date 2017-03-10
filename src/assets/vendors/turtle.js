@@ -208,3 +208,5 @@ var turtle = (function () {
 
 })();
 
+export default turtle;
+

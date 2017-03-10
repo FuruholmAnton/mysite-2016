@@ -261,10 +261,17 @@ gulp.task('deploy', () => {
     .pipe($.ghPages());
 });
 // 'gulp deploy' -- pushes your dist folder to Github
-gulp.task('deploy-main', () => {
+gulp.task('deploy:main', () => {
   return gulp.src('docs/**/*')
     .pipe($.ghPages({
-      origin: 'furuholmanton.github.io'
+      remoteUrl: 'git@github.com:FuruholmAnton/furuholmanton.github.io.git'
+    }));
+});
+gulp.task('deploy:main:src', () => {
+  return gulp.src('src/**/*')
+    .pipe($.ghPages({
+      remoteUrl: 'git@github.com:FuruholmAnton/furuholmanton.github.io.git',
+      branch: 'master'
     }));
 });
 

@@ -1,6 +1,13 @@
+import {once} from './1-helper.js';
+import './helper.js';
+import {TweenMax, easePack} from "gsap";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
+
 if(document.querySelector(".subNav") instanceof HTMLElement) {
 
-(function subNav() {
+
+
+// (function subNav() {
 
 	window.addEventListener("resize", function () {
 		 calcStartPosition();
@@ -83,12 +90,12 @@ if(document.querySelector(".subNav") instanceof HTMLElement) {
 			    offset   = elemRect.top - bodyRect.top;
 
 			e.preventDefault();
-			TweenMax.to(window, 2, {scrollTo:{y:offset}, ease:Power4.ease});
+			TweenMax.to(window, 1, {scrollTo:{y:offset}, ease:Expo.easeOut});
 		});
 	}
 
 
-})();
+// })();
 
 }
 

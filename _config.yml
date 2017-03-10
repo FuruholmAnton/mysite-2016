@@ -2,16 +2,15 @@
 # Can be used in your theme by calling 'site.title' and so on
 name: Furuholm
 description: 'Anton Furuholm is a swedish front-end developer. He makes websites as a living but also for his own projets. Check out the site to find out more.'
-url: http://localhost:1337
+url: https://furuholmanton.github.io
 # url: furuholmanton.github.io
 # url: https://furuholm.com
 logo: /assets/images/logo-black.svg
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
-source: src
-destination: docs
-# exclude: ['assets']
-keep_files: []
+source: .tmp/src
+destination: .tmp/dist
+exclude: ['assets']
 
 defaults:
   -
@@ -62,11 +61,12 @@ highlighter: true
 
 # Extending Jekyll
 gems:
-  - jekyll-archives
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from
 
 # Settings for archives
 # jekyll-archives:
