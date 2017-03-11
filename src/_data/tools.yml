@@ -1,6 +1,6 @@
 # - path: bitbucket.svg
  
-- path: bower.svg
+# - path: bower.svg
  
 - path: github.svg
 
@@ -32,15 +32,15 @@
  
 - path: npm.svg
 
-- path: php.svg
+# - path: php.svg
  
 - path: polymer.svg
  
 - path: sass.svg
  
-- path: sketch.svg
+# - path: sketch.svg
  
-- path: sublimetext.svg
+# - path: sublimetext.svg
  
 # - path: terminal.svg
  
