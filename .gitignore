@@ -62,7 +62,7 @@ test/
 bower_components
 
 # Output folders
-dist
+# dist # needed for dploy
 
 # hide the AWS and Rsync credentials file
 aws-credentials.json
