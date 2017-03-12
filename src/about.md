@@ -13,7 +13,7 @@ classes:
     <h2 class="sectionHeader_heading">
       About me
     </h2>
-    <p class="sectionHeader_text">My name is Anton Furuholm and I'm the creator of this website. Creating site is my life as a web developer. I worked at an agency <a href="//grandpublic.se" target="_blanck" class="link">Grand Public</a>, but I'm soon heading out on adventures traveling with my bicycle.</p>
+    <p class="sectionHeader_text">My name is Anton Furuholm and I'm the creator of furuholm.com. I make my living as a web developer. But I also like to go on adventures! For example I went to the US with a friend and 2 bikes and we biked from San Fransisco to Miami. But I'm currently working in Amsterdam at an agency called <a href="http://www.buildinamsterdam.com/" target="_blank" class="link">Build in Amsterdam BV.</a></p>
   </header>
     
   <article class="page-article">
